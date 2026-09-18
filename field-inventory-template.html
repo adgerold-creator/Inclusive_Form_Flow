@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Field Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 80rem;
+            margin: auto;
+            padding: 1rem;
+            color: #191919;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: .6rem;
+            border: 1px solid #999;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>F2 · Task and Data Plan</h1>
+    <p>Duplicate rows as needed. Justify every collected value.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Visible label / question</th>
+                <th>Why necessary now?</th>
+                <th>Required?</th>
+                <th>Native control/type</th>
+                <th>Submitted name/value</th>
+                <th>Autocomplete/inputmode</th>
+                <th>Constraint/instruction</th>
+                <th>Sensitivity and minimization decision</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>Needed to identify the person requesting a workshop spot.</td>
+                <td>Yes</td>
+                <td>input type="text"</td>
+                <td>name="attendee_name"</td>
+                <td>autocomplete="name"</td>
+                <td>Required.</td>
+                <td>Basic identifying information only. No extra personal details are collected.</td>
+            </tr>
+
+            <tr>
+                <td>Email address</td>
+                <td>Needed to send the fictional workshop confirmation and follow-up information.</td>
+                <td>Yes</td>
+                <td>input type="email"</td>
+                <td>name="email"</td>
+                <td>autocomplete="email"</td>
+                <td>Required. Enter an address like name@example.com.</td>
+                <td>Contact information is limited to email; phone number and mailing address are not needed.</td>
+            </tr>
+
+            <tr>
+                <td>Preferred workshop date</td>
+                <td>Needed to know when the attendee would like to participate.</td>
+                <td>Yes</td>
+                <td>input type="date"</td>
+                <td>name="workshop_date"</td>
+                <td>N/A</td>
+                <td>Required. Choose a date from October 1 through December 15, 2026.</td>
+                <td>Only the requested workshop date is collected; no unrelated scheduling information is needed.</td>
+            </tr>
+
+            <tr>
+                <td>Sewing experience</td>
+                <td>Helps the instructor understand the attendee's starting skill level.</td>
+                <td>Yes</td>
+                <td>select</td>
+                <td>name="experience" with beginner / some-experience / intermediate values</td>
+                <td>N/A</td>
+                <td>Required. Choose the option that best matches current experience.</td>
+                <td>Only a general skill level is requested instead of asking for detailed background information.</td>
+            </tr>
+
+            <tr>
+                <td>Morning session</td>
+                <td>Allows the attendee to choose one preferred session time.</td>
+                <td>Yes, as part of the session group</td>
+                <td>input type="radio"</td>
+                <td>name="session" value="morning"</td>
+                <td>N/A</td>
+                <td>Choose one session time.</td>
+                <td>This only collects the scheduling preference needed for the workshop.</td>
+            </tr>
+
+            <tr>
+                <td>Afternoon session</td>
+                <td>Provides the second available session choice.</td>
+                <td>Yes, as part of the session group</td>
+                <td>input type="radio"</td>
+                <td>name="session" value="afternoon"</td>
+                <td>N/A</td>
+                <td>Choose one session time.</td>
+                <td>This only collects the scheduling preference needed for the workshop.</td>
+            </tr>
+
+            <tr>
+                <td>I need to borrow a sewing machine</td>
+                <td>Helps determine how many loaner machines need to be prepared.</td>
+                <td>No</td>
+                <td>input type="checkbox"</td>
+                <td>name="loaner_machine" value="yes"</td>
+                <td>N/A</td>
+                <td>Optional. Check only if a loaner machine is needed.</td>
+                <td>Only equipment needs are collected; no explanation for why a machine is needed is requested.</td>
+            </tr>
+
+            <tr>
+                <td>I need a materials kit</td>
+                <td>Helps determine how many basic supply kits should be prepared.</td>
+                <td>No</td>
+                <td>input type="checkbox"</td>
+                <td>name="materials_kit" value="yes"</td>
+                <td>N/A</td>
+                <td>Optional. Check if a workshop materials kit is needed.</td>
+                <td>This only records whether supplies are needed and does not ask for unnecessary purchasing
+                    information.</td>
+            </tr>
+
+            <tr>
+                <td>Project choice</td>
+                <td>Helps prepare the right materials and instructions for the attendee.</td>
+                <td>Yes</td>
+                <td>select</td>
+                <td>name="project" with tote-bag / zipper-pouch / hem-sampler values</td>
+                <td>N/A</td>
+                <td>Required. Choose one beginner project.</td>
+                <td>Only the project preference needed for workshop preparation is collected.</td>
+            </tr>
+
+            <tr>
+                <td>Questions or notes</td>
+                <td>Gives the attendee a place to share an optional question related to the workshop.</td>
+                <td>No</td>
+                <td>textarea</td>
+                <td>name="notes"</td>
+                <td>N/A</td>
+                <td>Optional. Maximum 240 characters. Do not include private or sensitive information.</td>
+                <td>Optional and limited to 240 characters, with an instruction not to include sensitive information.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

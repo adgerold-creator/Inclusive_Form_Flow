@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Beginner Sewing Workshop Registration Request</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <p class="eyebrow">Beginner Sewing Workshop</p>
+
+        <h1>Beginner Sewing Workshop Registration Request</h1>
+
+        <p class="lede">
+            Request a spot in a beginner-friendly sewing workshop and choose
+            the session, project, and supplies that work best for you.
+        </p>
+    </header>
+
+    <main>
+        <section id="expectations">
+            <h2>F1 · Purpose and Expectations</h2>
+
+            <p>
+                This form is for people interested in attending a beginner sewing
+                workshop. It should take about 3–5 minutes to complete.
+            </p>
+
+            <p>
+                In a real registration flow, the workshop team would review the
+                request and send a confirmation by email.
+            </p>
+
+            <p>
+                Fields marked "(required)" must be completed. Fields marked
+                "(optional)" can be left blank.
+            </p>
+
+            <p>
+                This is a course prototype and does not collect or send real
+                information. Use fictional test information only and do not
+                include private or sensitive information.
+            </p>
+        </section>
+        <section id="requirements">
+            <h2>F4 · Requirements and Validation</h2>
+
+            <p>
+                Fields marked "(required)" must be completed before the request can be submitted.
+            </p>
+
+            <ul>
+                <li>Email must be entered in a valid email format, such as name@example.com.</li>
+                <li>Workshop dates must be between October 1 and December 15, 2026.</li>
+                <li>Choose one experience level, one session, and one project.</li>
+                <li>Supply requests are optional.</li>
+                <li>Questions or notes are optional and limited to 240 characters.</li>
+            </ul>
+        </section>
+        <section id="semantic-form">
+            <h2>F3 · Semantic Form</h2>
+            <p>
+                Complete the required fields below to request a workshop spot.
+                Optional supply requests can be left blank.
+            </p>
+        </section>
+        <form method="get">
+
+            <fieldset>
+                <legend>Contact information</legend>
+
+                <div class="field">
+                    <label for="name">Name (required)</label>
+                    <input id="name" name="attendee_name" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email address (required)</label>
+                    <p class="help" id="email-help">
+                        Example: name@example.com
+                    </p>
+                    <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-help"
+                        required>
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Workshop choices</legend>
+
+                <div class="field">
+                    <label for="workshop-date">Preferred workshop date (required)</label>
+                    <p class="help" id="date-help">
+                        Choose a date from October 1 through December 15, 2026.
+                    </p>
+                    <input id="workshop-date" name="workshop_date" type="date" min="2026-10-01" max="2026-12-15"
+                        aria-describedby="date-help" required>
+                </div>
+
+                <div class="field">
+                    <label for="experience">Sewing experience (required)</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Choose an experience level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="some-experience">Some experience</option>
+                        <option value="intermediate">Intermediate</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Preferred session (required)</legend>
+
+                    <label class="choice">
+                        <input type="radio" name="session" value="morning" required>
+                        Morning session
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="session" value="afternoon">
+                        Afternoon session
+                    </label>
+                </fieldset>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Project and supplies</legend>
+
+                <div class="field">
+                    <label for="project">Project choice (required)</label>
+                    <select id="project" name="project" required>
+                        <option value="">Choose a beginner project</option>
+                        <option value="tote-bag">Tote bag</option>
+                        <option value="zipper-pouch">Zipper pouch</option>
+                        <option value="hem-sampler">Hem sampler</option>
+                    </select>
+                </div>
+
+                <label class="choice">
+                    <input type="checkbox" name="loaner_machine" value="yes">
+                    I need to borrow a sewing machine
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="materials_kit" value="yes">
+                    I need a materials kit
+                </label>
+
+                <div class="field">
+                    <label for="notes">Questions or notes (optional)</label>
+                    <p class="help" id="notes-help">
+                        Maximum 240 characters. Do not include private or sensitive information.
+                    </p>
+                    <textarea id="notes" name="notes" maxlength="240" aria-describedby="notes-help"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Request a workshop spot</button>
+
+        </form>
+        <section id="states">
+            <h2>F5 · State and Recovery Specimen</h2>
+
+            <p>
+                These examples show the different form states used in the workshop
+                registration. They are demonstrations only and are separate from the
+                main registration form.
+            </p>
+
+            <div class="state-grid">
+
+                <div class="state-example">
+                    <h3>Default</h3>
+
+                    <label for="state-default">Example field</label>
+                    <input id="state-default" type="text" placeholder="Default state">
+                </div>
+
+
+                <div class="state-example">
+                    <h3>Focus</h3>
+
+                    <label for="state-focus">Example field</label>
+                    <input id="state-focus" type="text" value="Keyboard focus example">
+                </div>
+
+
+                <div class="state-example">
+                    <h3>Required</h3>
+
+                    <label for="state-required">Email address (required)</label>
+                    <input id="state-required" type="email" required>
+                    <p class="help">
+                        This field must be completed before submission.
+                    </p>
+                </div>
+
+
+                <div class="state-example">
+                    <h3>Valid</h3>
+
+                    <label for="state-valid">Email address</label>
+                    <input id="state-valid" class="state-valid" type="email" value="test@example.com">
+                    <p class="state-message">
+                        Valid: The email is in the expected format.
+                    </p>
+                </div>
+
+
+                <div class="state-example">
+                    <h3>Invalid</h3>
+
+                    <label for="state-invalid">Email address</label>
+                    <input id="state-invalid" class="state-invalid" type="email" value="alexa.example"
+                        aria-invalid="true" aria-describedby="invalid-message">
+                    <p id="invalid-message" class="state-message">
+                        <strong>Error:</strong> Enter an email in the format
+                        name@example.com.
+                    </p>
+                </div>
+
+
+                <div class="state-example">
+                    <h3>Disabled</h3>
+
+                    <button type="button" disabled>
+                        Registration unavailable
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="server-error">
+                <h3>Static Server-Returned Error</h3>
+
+                <div class="error-summary">
+                    <p>
+                        <strong>There is a problem with the fictional submission.</strong>
+                    </p>
+                    <p>
+                        <a href="#server-email">
+                            Email address needs attention
+                        </a>
+                    </p>
+                </div>
+
+                <div class="field field-error">
+                    <label for="server-email">Email address</label>
+
+                    <input id="server-email" type="email" value="alexa@example.com" aria-invalid="true"
+                        aria-describedby="server-email-error">
+
+                    <p id="server-email-error">
+                        <strong>Error:</strong> The email address could not be confirmed.
+                        Check the address for typing errors and enter it in the format
+                        name@example.com before submitting again.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section id="documentation">
+            <h2>F2 and F6 · Planning and Evidence</h2>
+
+            <h3>Task and Data Plan</h3>
+            <p>
+                The field inventory explains why each value is needed, whether it is
+                required, the control type, submitted name and value, constraints,
+                and privacy decisions.
+            </p>
+
+            <p>
+                <a href="field-inventory-template.html">
+                    View the completed field inventory
+                </a>
+            </p>
+
+            <h3>Fictional Test Data</h3>
+            <ul>
+                <li>Name: Alexa Sample</li>
+                <li>Email: alexa@example.com</li>
+                <li>Workshop date: October 15, 2026</li>
+                <li>Experience: Beginner</li>
+                <li>Session: Morning</li>
+                <li>Project: Tote bag</li>
+                <li>Loaner machine: Yes</li>
+                <li>Materials kit: No</li>
+                <li>Notes: Looking forward to learning the basics.</li>
+            </ul>
+
+            <p>
+                All testing uses fictional information only. No real personal
+                information is collected or submitted by this prototype.
+            </p>
+
+            <h3>Test Record</h3>
+            <p>
+                The completed test record documents HTML and CSS validation,
+                keyboard access, accessible names and groups, validation states,
+                responsive layouts, zoom and reflow, and fictional form submission tests.
+            </p>
+
+            <h3>AI Disclosure</h3>
+            <p>
+                The final AI disclosure will document how AI was used for support
+                during planning, troubleshooting, and verification while the final
+                design and testing decisions were checked in the browser.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
